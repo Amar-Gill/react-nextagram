@@ -44,8 +44,6 @@ class LoginForm extends React.Component {
             }
         })
             .then(response => {
-                console.log(response)
-                console.log(response.data.auth_token)
                 localStorage.setItem('JWT', response.data.auth_token)
                 this.props.updateUserLoggedIn()
                 this.props.toggle()
